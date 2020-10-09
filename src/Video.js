@@ -4,11 +4,9 @@ import "./Video.css";
 function Video() {
   return (
     <div className="video">
-      <video className="video__player" loop>
-        <source
-          src="https://www.youtube.com/watch?v=ptD0T-ZcF2M&t=4s"
-          type="video/mp4"
-        ></source>
+      <video className="video__player">
+        <source src="./sj.mp4" type="video/mp4"/>
+
       </video>
 
       {/* Video Footer */}
