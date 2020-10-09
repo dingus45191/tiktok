@@ -6,8 +6,7 @@ function App() {
   return (
     <div className="app">
       <div className="app__videos">
-        <Video />
-        <Video />
+        <Video /><
       </div>
     </div>
   );

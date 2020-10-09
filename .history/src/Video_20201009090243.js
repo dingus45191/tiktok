@@ -7,7 +7,7 @@ function Video() {
       <video className="video__player" loop>
         <source
           src="https://www.youtube.com/watch?v=ptD0T-ZcF2M&t=4s"
-          type="video/mp4"
+          typ
         ></source>
       </video>
 

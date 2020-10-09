@@ -2,7 +2,4 @@ html {
     scroll-snap-type: y mandatory;
 }
 
-.app {
-    height: 100vh;
-
-}
+.app
