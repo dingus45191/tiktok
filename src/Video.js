@@ -1,42 +1,45 @@
 import React, {useRef, useState} from "react";
 import "./Video.css";
 import vid from "./sj.mp4";
+import VideoFooter from "./VideoFooter";
+import VideoSidebar from "./VideoSidebar";
 
 function Video() {
-    const[playing, setPlaying]= useState(false)
+    const[playing,setPlaying]= useState(false);
     const videoRef= useRef(null);
 
-    const handleVideoPress= ()=>{
+    const handleVideoPress= () => {
 
         if(playing){
             videoRef.current.pause();
-            setPlaying(false)
+            setPlaying(false);
 
         }
         else {
             videoRef.current.play();
-            setPlaying(true)
+            setPlaying(true);
         }
-        //if video is playing
-        //stop.. it
 
-        //otherwise play it
     }
 
   return (
     <div className="video">
-      <video className="video__player">
+      <video
+          className="video__player"
+          onClick={handleVideoPress}
+          loop
+          ref={videoRef}
+      >
         <source
-            onClick={handleVideoPress}
             src={vid}
             type="video/mp4"
-            ref={videoRef}
         />
 
       </video>
 
-      {/* Video Footer */}
-      {/* Video Sidebar */}
+     <VideoFooter/>
+     <VideoSidebar/>
+
     </div>
   );
 }
